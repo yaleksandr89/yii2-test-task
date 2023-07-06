@@ -1,5 +1,7 @@
 <?php
 
+use app\components\Images;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
@@ -26,8 +28,12 @@ $config = [
             ],
         ],
         'db' => $db,
+        'images' => [
+            'class' => Images::class
+        ]
     ],
     'params' => $params,
+
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
