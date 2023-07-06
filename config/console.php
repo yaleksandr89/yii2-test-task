@@ -1,5 +1,6 @@
 <?php
 
+use app\commands\GenerateThumbnailsCommand;
 use app\components\Images;
 
 $params = require __DIR__ . '/params.php';
@@ -33,7 +34,9 @@ $config = [
         ]
     ],
     'params' => $params,
-
+    'controllerMap' => [
+        'generate-thumbnails' => GenerateThumbnailsCommand::class,
+    ],
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
